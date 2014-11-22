@@ -1,0 +1,40 @@
+{
+  "variables": {
+    "base_image": "ubuntu:latest",
+    "otp_image": "okffi/otp"
+  },
+  "builders": [
+    {
+	"type": "docker",
+	"image": "{{user `base_image`}}",
+	"export_path": "/tmp/otp-docker.tar"
+    }
+  ],
+  "provisioners": [
+    {
+	"type": "shell",
+	"inline": [
+		"sleep 30",
+		"sudo apt-get update",
+		"sudo apt-get install -y git",
+		"sudo apt-get install -y openjdk-7-jdk",
+		"sudo apt-get install -y maven",
+		"sudo mkdir /otp",
+		"cd /otp",
+		"git clone git://github.com/opentripplanner/OpenTripPlanner.git",
+		"cd /otp/OpenTripPlanner",
+		"git checkout 1137cf5750ee3d3ee2ac40eff08a2ed1a3a646bd",
+		"mvn clean package -DskipTests"
+	]
+    }
+  ],
+  "post-processors": [
+        [
+            {
+                "type": "docker-import",
+                "repository": "{{user `otp_image`}}",
+                "tag": "latest"
+            }
+        ]
+    ]
+}

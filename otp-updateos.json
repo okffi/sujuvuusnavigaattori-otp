@@ -1,0 +1,25 @@
+{
+  "variables": {
+    "base_image": "okffi/otp",
+    "otp_image": "okffi/otp"
+  },
+  "builders": [
+    {
+	"type": "docker",
+	"image": "{{user `base_image`}}",
+	"commit": true,
+	"pull": false
+    }
+  ],
+  "provisioners": [
+    {
+	"type": "shell",
+	"inline": [
+		"sleep 30",
+		"sudo apt-get update",
+		"sudo apt-get upgrade",
+		"apt-get dist-upgrade"
+	]
+    }
+  ]
+}
