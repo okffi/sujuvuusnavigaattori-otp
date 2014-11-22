@@ -23,7 +23,6 @@
 		"cd /otp",
 		"git clone git://github.com/opentripplanner/OpenTripPlanner.git",
 		"cd /otp/OpenTripPlanner",
-		"git checkout 1137cf5750ee3d3ee2ac40eff08a2ed1a3a646bd",
 		"mvn clean package -DskipTests"
 	]
     }
