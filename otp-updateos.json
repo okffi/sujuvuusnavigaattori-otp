@@ -21,5 +21,14 @@
 		"apt-get dist-upgrade"
 	]
     }
-  ]
+  ],
+  "post-processors": [
+        [
+            {
+                "type": "docker-tag",
+                "repository": "{{user `otp_image`}}",
+                "tag": "latest"
+            }
+        ]
+    ]
 }

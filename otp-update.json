@@ -17,10 +17,19 @@
 	"inline": [
 		"sleep 30",
 		"cd /otp",
-		"sudo git pull git://github.com/opentripplanner/OpenTripPlanner.git",
+		"git pull git://github.com/opentripplanner/OpenTripPlanner.git",
 		"cd /otp/OpenTripPlanner",
-		"mvn clean package"
+		"mvn clean package -DskipTests"
 	]
     }
-  ]
+  ],
+  "post-processors": [
+        [
+            {
+                "type": "docker-tag",
+                "repository": "{{user `otp_image`}}",
+                "tag": "latest"
+            }
+        ]
+    ]
 }
