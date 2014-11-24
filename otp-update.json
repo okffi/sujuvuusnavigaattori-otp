@@ -16,9 +16,8 @@
 	"type": "shell",
 	"inline": [
 		"sleep 30",
-		"cd /otp",
-		"git pull git://github.com/opentripplanner/OpenTripPlanner.git",
 		"cd /otp/OpenTripPlanner",
+		"git pull git://github.com/opentripplanner/OpenTripPlanner.git",
 		"mvn clean package -DskipTests"
 	]
     }
