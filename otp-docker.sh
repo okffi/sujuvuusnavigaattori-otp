@@ -50,7 +50,7 @@ case "$1" in
 		    exit 1
 		fi
 		datadir=$2
-		docker run -w /otp/OpenTripPlanner -v $datadir:/mnt/otp-data "$image" $optcmd --useStreetsForLinking --longDistance --build /mnt/otp-data 
+		docker run -w /otp/OpenTripPlanner -v $datadir:/mnt/otp-data "$image" $otpcmd --useStreetsForLinking --longDistance --build /mnt/otp-data
 		rc=$?
 		;;
 	start|run)
