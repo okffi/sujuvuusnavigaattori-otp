@@ -6,10 +6,10 @@ Sujuvuusnavigaattori OpenTripPlanner Docker Server
 OTP-docker server is a utility that facilitates deployment and running
 of Open Trip Planner via Docker container with the use of Packer.
 
-Packer is a utility to streamline creation and deployment of virtual
+[Packer](https://packer.io/) is a utility to streamline creation and deployment of virtual
 machine images.
 
-Docker is a flavor of machine virtualization tools with neat features.
+[Docker](http://docker.io/) is a flavor of machine virtualization tools with neat features.
 
 This script allows you to:
 
@@ -17,11 +17,11 @@ This script allows you to:
 
     b) build graphs using custom downloaded OSM/GTFS data
 
-    c) run OTP server as a docker container
+    c) run OTP server as a Docker container
 
-    d) view running docker containers
+    d) view running Docker containers
 
-    e) stop a running docker container
+    e) stop a running Docker container
 
 The script is also capable of updating the version of OTP and base operating 
 system.
