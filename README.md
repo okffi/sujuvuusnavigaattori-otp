@@ -13,15 +13,11 @@ machine images.
 
 This script allows you to:
 
-    a) create Docker image from official ubuntu:latest and build OTP inside it
-
-    b) build graphs using custom downloaded OSM/GTFS data
-
-    c) run OTP server as a Docker container
-
-    d) view running Docker containers
-
-    e) stop a running Docker container
+1. create Docker image from official ubuntu:latest and build OTP inside it
+2. build graphs using custom downloaded OSM/GTFS data
+3. run OTP server as a Docker container
+4. view running Docker containers
+5. stop a running Docker container
 
 The script is also capable of updating the version of OTP and base operating 
 system.
