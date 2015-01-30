@@ -27,3 +27,7 @@ The script is also capable of updating the version of OTP and base operating
 system.
 
 Run script to see the usage help.
+
+### OTP compatibility note
+
+It's worth it to note that OSM data for Finland causes exceptino in OTP code after commit 707351c2ff767814279de6bbe680f310064a44d5
