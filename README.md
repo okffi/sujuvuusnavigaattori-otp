@@ -30,4 +30,4 @@ Run script to see the usage help.
 
 ### OTP compatibility note
 
-It's worth it to note that OSM data for Finland causes exceptino in OTP code after commit 707351c2ff767814279de6bbe680f310064a44d5
+It's worth it to note that OSM data for Finland causes an exception in recent OTP code, Known working commit: [707351c2ff767814279de6bbe680f310064a44d5](https://github.com/opentripplanner/OpenTripPlanner/commit/707351c2ff767814279de6bbe680f310064a44d5)
