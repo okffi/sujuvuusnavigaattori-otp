@@ -26,4 +26,6 @@ Run script to see the usage help.
 
 ### OTP compatibility note
 
-It's worth it to note that OSM data for Finland causes an exception in recent OTP code, known working commit: [707351c2ff767814279de6bbe680f310064a44d5](https://github.com/opentripplanner/OpenTripPlanner/commit/707351c2ff767814279de6bbe680f310064a44d5)
+OSM data for Finland causes an exception in OTP code as of Jan 2015. Here's the commit that has been tested and is known to work: [1137cf5750ee3d3ee2ac40eff08a2ed1a3a646bd](https://github.com/opentripplanner/OpenTripPlanner/commit/1137cf5750ee3d3ee2ac40eff08a2ed1a3a646bd)
+
+Reportedly, the Exception is caused by this OSM object: http://www.openstreetmap.org/node/2229626127#map=9/63.1965/26.1118
